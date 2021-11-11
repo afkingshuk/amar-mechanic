@@ -94,28 +94,27 @@ if(isset($_POST['book'])){
           <input class='input-field' type='text' placeholder='Username' name='userName'>
         </div>
         <div class='input-container'>
-          <i class='fa fa-user icon'></i>
+          <i class='fa fa-house-user icon'></i>
           <input class='input-field' type='text' placeholder='Address' name='userAddress'>
         </div>
         <div class='input-container'>
-          <i class='fa fa-user icon'></i>
-          <i class='fas fa-phone'></i>
+          <i class='fas fa-phone icon'></i>
           <input class='input-field' type='number' placeholder='Phone' name='userPhone'>
         </div>
         <div class='input-container'>
-          <i class='fa fa-user icon'></i>
+          <i class='fa fa-id-badge icon'></i>
           <input class='input-field' type='text' placeholder='License Number' name='userLicense'>
         </div>
         <div class='input-container'>
-          <i class='fa fa-user icon'></i>
+          <i class='fa fa-car-side icon'></i>
           <input class='input-field' type='text' placeholder='Engine Number' name='userEngine'>
         </div>
         <div class='input-container'>
-          <i class='fa fa-user icon'></i>
+          <i class='fa fa-calendar-alt icon'></i>
           <input class='input-field' type='date' placeholder='Appointment Date' name='appointmentDate'>
         </div>
         <div class='input-container'>
-          <i class='fa fa-user icon'></i>
+          <i class='fa fa-wrench icon'></i>
           <select name='mechanicName'>
         ";
 
