@@ -23,7 +23,7 @@ INSERT INTO `mechanics` (`mechanicID`, `mechanicName`, `serving`, `usertype`) VA
 --
 
 CREATE TABLE IF NOT EXISTS `appointments` (
-  `appointmentID` int(11) NOT NULL,
+  `appointmentID` int(11) NOT NULL AUTO_INCREMENT,
   `userName` varchar(200) NOT NULL,
   `userAddress` varchar(10000) NOT NULL,
   `userPhone` int(10) NOT NULL,
