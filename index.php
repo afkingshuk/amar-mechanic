@@ -1,4 +1,4 @@
 <?php
     include("db/connectDB.php");
-    include("pages/home.php");
+    include("home.php");
 ?>

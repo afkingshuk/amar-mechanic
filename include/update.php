@@ -22,7 +22,7 @@ if($conn){
                 $_SESSION['message'] = "Address updated!"; 
                 if (!$try) {
         
-                    header('location: admin.php');
+                    header('location: ../admin.php');
                 }
             }else{
                 // header("location: index.php");
@@ -32,7 +32,7 @@ if($conn){
     
     // session_destroy();
     else{
-        header("location: admin.php");
+        header("location: ../admin.php");
     }
 }
 

@@ -17,6 +17,7 @@ INSERT INTO `mechanics` (`mechanicID`, `mechanicName`, `serving`, `usertype`) VA
 (3, 'M_3', 0 , 'mechanic'),
 (4, 'M_4', 0 , 'mechanic');
 
+
 -- --------------------------------------------------------
 --
 -- Table structure for table `appointments`
@@ -30,8 +31,9 @@ CREATE TABLE IF NOT EXISTS `appointments` (
   `userLicense` varchar(20) NOT NULL,
   `userEngine` varchar(20) NOT NULL,  
   `appointmentDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `mechanicID` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 COMMENT='Appointment and Mechanic relation Table';
+  `mechanicID` int(11) NOT NULL,
+   PRIMARY KEY (appointmentID)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1 COMMENT='Appointment and Mechanic relation Table';
 
 --
 -- Dumping data for table `appointments`
@@ -40,4 +42,3 @@ CREATE TABLE IF NOT EXISTS `appointments` (
 INSERT INTO `appointments` (`appointmentID`, `userName` , `userAddress` ,`userPhone`,`userLicense` ,`userEngine`, `appointmentDate`, `mechanicID`) VALUES
 (1, 'User 1', 'Dhaka', 1234567891, 'license-Number-1', 'Engine-Number-1', '2021-11-12 09:51:46', 1),
 (2, 'User 2', 'Dhaka', 1234567892, 'license-Number-2', 'Engine-Number-2', '2021-11-13 09:00:00', 4);
-
