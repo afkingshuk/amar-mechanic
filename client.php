@@ -26,13 +26,13 @@
 if(isset($_POST['book'])){
     
 
-    $userName=$_POST['userName'];
+  $userName=$_POST['userName'];
 	$userAddress=$_POST['userAddress'];
 	$userPhone=$_POST['userPhone'];
 	$userLicense=$_POST['userLicense'];
 	$userEngine=$_POST['userEngine'];	
 	$appointmentDate=$_POST['appointmentDate'];
-    $mechanicName=$_POST['mechanicName'];
+  $mechanicName=$_POST['mechanicName'];
 
 	include("./db/connectDB.php");
 
@@ -89,7 +89,7 @@ if(isset($_POST['book'])){
     <form method='POST'>
         <h2>Appointment Form</h2>
         <div class='input-container'>
-          <i class='fa fa-user icon'></i>
+          <i class='fa fa-user icon'></i>          
           <input class='input-field' type='text' placeholder='Username' name='userName'>
         </div>
         <div class='input-container'>
@@ -98,6 +98,7 @@ if(isset($_POST['book'])){
         </div>
         <div class='input-container'>
           <i class='fa fa-user icon'></i>
+          <i class='fas fa-phone'></i>
           <input class='input-field' type='number' placeholder='Phone' name='userPhone'>
         </div>
         <div class='input-container'>
