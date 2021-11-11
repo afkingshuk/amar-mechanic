@@ -20,8 +20,8 @@
 
 
 <?php
-include("../db/connectDB.php");
-include("../include/appointments.php");
+include("./db/connectDB.php");
+include("./include/appointments.php");
 
 ?>
 

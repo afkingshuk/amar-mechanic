@@ -33,7 +33,7 @@ if(isset($_POST['book'])){
 	$appointmentDate=$_POST['appointmentDate'];
     $mechanicName=$_POST['mechanicName'];
 
-	include("../db/connectDB.php");
+	include("./db/connectDB.php");
 
     $query = "SELECT appointmentID FROM appointments WHERE appointmentDate = '$appointmentDate' AND mechanicID = '$mechanicName'";
     $res = mysqli_query($conn , $query);
@@ -117,7 +117,7 @@ if(isset($_POST['book'])){
         ";
 
         // Mechanic : <input type='text' name='mechanicID'></br>  
-            include("../db/connectDB.php");
+            include("./db/connectDB.php");
             $sql = mysqli_query($conn, "SELECT mechanicName FROM mechanics");
             
             while ($row = $sql->fetch_assoc()){          

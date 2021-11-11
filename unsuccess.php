@@ -22,7 +22,7 @@
 
 
 <?php
-include("../db/connectDB.php");
+include("./db/connectDB.php");
 
 ?>
 
