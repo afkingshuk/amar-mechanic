@@ -47,7 +47,7 @@ if(isset($_POST['book'])){
 		printf("Query failed \n");
 		header("location: ./unable.php");
 	} else if(!$userName || !$userAddress || !$userPhone || !$userLicense || !$userEngine || !$appointmentDate || !$mechanicName ) {
-        header("location: ./unsuccess.php");
+        //header("location: ./unsuccess.php");
     }else {
         /* CHECK if same user or email exists or not ? */
         $query="INSERT INTO appointments (userName , userAddress ,userPhone,userLicense ,userEngine, appointmentDate, mechanicID)
@@ -87,35 +87,35 @@ if(isset($_POST['book'])){
     // ";
     echo "
     <div class='container'>
-    <form method='POST'>
+    <form method='POST' name='submitForm' onsubmit='return validateForm()'>
         <h2>Appointment Form</h2>
         <div class='input-container'>
           <i class='fa fa-user icon'></i>          
-          <input class='input-field' type='text' placeholder='Username' name='userName'>
+          <input class='input-field' type='text' placeholder='Username' name='userName' required>
         </div>
         <div class='input-container'>
           <i class='fa fa-house-user icon'></i>
-          <input class='input-field' type='text' placeholder='Address' name='userAddress'>
+          <input class='input-field' type='text' placeholder='Address' name='userAddress' required>
         </div>
         <div class='input-container'>
           <i class='fas fa-phone icon'></i>
-          <input class='input-field' type='number' placeholder='Phone' name='userPhone'>
+          <input class='input-field' type='number' placeholder='Phone' name='userPhone' required>
         </div>
         <div class='input-container'>
           <i class='fa fa-id-badge icon'></i>
-          <input class='input-field' type='text' placeholder='License Number' name='userLicense'>
+          <input class='input-field' type='text' placeholder='License Number' name='userLicense' required>
         </div>
         <div class='input-container'>
           <i class='fa fa-car-side icon'></i>
-          <input class='input-field' type='text' placeholder='Engine Number' name='userEngine'>
+          <input class='input-field' type='text' placeholder='Engine Number' name='userEngine' required>
         </div>
         <div class='input-container'>
           <i class='fa fa-calendar-alt icon'></i>
-          <input class='input-field' type='date' placeholder='Appointment Date' name='appointmentDate'>
+          <input class='input-field' type='date' placeholder='Appointment Date' name='appointmentDate' required>
         </div>
         <div class='input-container'>
           <i class='fa fa-wrench icon'></i>
-          <select name='mechanicName'>
+          <select name='mechanicName' required>
         ";
 
         // Mechanic : <input type='text' name='mechanicID'></br>  
@@ -127,7 +127,7 @@ if(isset($_POST['book'])){
             };            
         echo "
         </select> </div>               
-        <input class='btn' type='submit' name='book' value='Book Appointment'></br>
+        <input class='btn' type='submit' name='book' value='Book Appointment' ></br>
         </form>
     ";
 }
@@ -158,6 +158,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </body>
 </html>
 
+<script>
+function validateForm() {
+        var form = document.submitForm;
+        if(!$userName || !$userAddress || !$userPhone || !$userLicense || !$userEngine || !$appointmentDate || !$mechanicName )
+        
+        if(form.userName.value = "") { alert("Name must be filled out"); return false;}
+        if(form.userAddress.value = "") { alert("Address must be filled out"); return false;}
+        if(form.userPhone.value = "") { alert("Phone must be filled out"); return false;}
+        //if(form.userPhone.value = "") { alert("Phone must be filled out"); }
+        if(form.userLicense.value = "") { alert("License Number must be filled out"); return false;}
+        if(form.userEngine.value = "") { alert("Engine Number must be filled out"); return false;}
+        if(form.appointmentDate.value = "") { alert("Appointment Date must be filled out"); return false;}
+        if(form.mechanicName.value = "") { alert("Mechanic's Name must be Selected"); return false;}      
+                
+      }
+</script>
 
 <style>
 body {
