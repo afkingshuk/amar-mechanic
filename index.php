@@ -1,8 +1,4 @@
 <?php
     include("db/connectDB.php");
-    include("pages/admin.php");
+    include("pages/home.php");
 ?>
-
-<div> 
-    <h1> Home </h1>
-</div>
