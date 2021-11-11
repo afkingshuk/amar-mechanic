@@ -83,7 +83,7 @@ if($conn){
 </form>
 <div>
     <div class="col-sm-offset-2 col-sm-6"  style="padding-bottom: 20px;">
-      <a href="../pages/admin.php"><button class="btn btn-default btn-warning">Back</button></a>
+      <a href="../admin.php"><button class="btn btn-default btn-warning">Back</button></a>
   </div>
 </div>
 
